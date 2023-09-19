@@ -1,10 +1,17 @@
 class Banco:
     def __init__(self, nomeBanco):
         self.nomeBanco = nomeBanco
+        self.lista_clientes = []
 
-    def criar_conta(self, nome, saldo_inicial):
+    def criar_conta(self, id, nome, saldo_inicial):
+        self.id = id
         self.nome = nome
         self.saldo_inicial = saldo_inicial
+        self.lista_clientes [self.id] = [self.nome, self.saldo_inicial]
+
+    def getClientes(self):
+        for chave, valor in self.lista_clientes.items():
+            print(f"ID: {chave} - Nome: {valor[0]} - Saldo: {valor[1]}")
 
     def sacar(self, conta, valor):
         self.conta = conta

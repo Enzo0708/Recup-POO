@@ -5,6 +5,7 @@ def main():
     try:
         sair = False
         banco = Banco("Senai")
+        countID = 0
         while sair == False:
             os.system("cls")
             print("---MENU---")
@@ -13,7 +14,8 @@ def main():
             print("[3] - Depositar")
             print("[4] - Transferir")
             print("[5] - Saldo")
-            print("[6] - Sair")
+            print("[6] - Clientes")
+            print("[7] - Sair")
             print("")
             menu = int(input(">> "))
             os.system("pause")
@@ -33,10 +35,12 @@ def main():
                     os.system("cls")
                     print("Insira as Informações")
 
+                    countID += 1
+                    id = countID
                     conta = input("Informe sua Conta: ")
                     valor = float(input("Digite o valor a ser Retirado: "))
 
-                    banco.sacar(conta, valor)
+                    banco.sacar(id, conta, valor)
                     os.system("pause")
 
                 case 3:
@@ -70,6 +74,9 @@ def main():
                     os.system("pause")
 
                 case 6:
+                    banco.getClientes()
+
+                case 7:
                     os.system("cls")
                     sair = True
                     print("Saindo...")
