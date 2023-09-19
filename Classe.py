@@ -41,7 +41,7 @@ class Banco:
 
         if self.saldo_inicial >= self.valor:
             self.saldo_inicial - self.valor
-            self.origem + self.valor
+            self.destino + self.valor
 
             print("Tranferencia realizada")
 
