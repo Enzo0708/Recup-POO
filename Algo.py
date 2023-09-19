@@ -26,7 +26,7 @@ def main():
                     print("Criar Conta")
                     print("Insira as Informações")
 
-                    nome = input("Digite seu Nome: ")
+                    nome = str(input("Digite seu Nome: "))
                     saldo_inicial = float(input("Digite seu Saldo Inicial: "))
 
                     banco.criar_conta(nome, saldo_inicial)
@@ -39,7 +39,7 @@ def main():
 
                     countID += 1
                     id = countID
-                    conta = input("Informe sua Conta: ")
+                    conta = str(input("Informe sua Conta: "))
                     valor = float(input("Digite o valor a ser Retirado: "))
 
                     banco.sacar(id, conta, valor)
@@ -50,7 +50,7 @@ def main():
                     print("Depósito")
                     print("Insira as Informações")
 
-                    conta2 = input("DInforme sua Conta: ")
+                    conta2 = str(input("DInforme sua Conta: "))
                     valor2 = float(input("Digite o valor a ser Depositado: "))
 
                     banco.depositar(conta2, valor2)
@@ -61,8 +61,8 @@ def main():
                     print("Transferencia")
                     print("Insira as Informações")
 
-                    origem = input("Informe sua Conta: ")
-                    destino = input("Digite o nome da conta que receberá a transferencia: ")
+                    origem = str(input("Informe sua Conta: "))
+                    destino = str(input("Digite o nome da conta que receberá a transferencia: "))
                     valor3 = float(input("Digite o valor da Transferencia: "))
 
                     banco.transferir(origem, destino, valor3)
@@ -73,7 +73,7 @@ def main():
                     print("Saldo")
                     print("Insira as Informações")
 
-                    conta3 = input("Informe sua Conta")
+                    conta3 = str(input("Informe sua Conta"))
 
                     banco.saldo(conta3)
                     os.system("pause")
