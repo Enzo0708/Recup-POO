@@ -23,6 +23,7 @@ def main():
             match menu:
                 case 1:
                     os.system("cls")
+                    print("Criar Conta")
                     print("Insira as Informações")
 
                     nome = input("Digite seu Nome: ")
@@ -33,6 +34,7 @@ def main():
 
                 case 2:
                     os.system("cls")
+                    print("Saque")
                     print("Insira as Informações")
 
                     countID += 1
@@ -45,6 +47,7 @@ def main():
 
                 case 3:
                     os.system("cls")
+                    print("Depósito")
                     print("Insira as Informações")
 
                     conta2 = input("DInforme sua Conta: ")
@@ -55,6 +58,7 @@ def main():
 
                 case 4:
                     os.system("cls")
+                    print("Transferencia")
                     print("Insira as Informações")
 
                     origem = input("Informe sua Conta: ")
@@ -66,6 +70,7 @@ def main():
 
                 case 5:
                     os.system("cls")
+                    print("Saldo")
                     print("Insira as Informações")
 
                     conta3 = input("Informe sua Conta")
@@ -74,7 +79,10 @@ def main():
                     os.system("pause")
 
                 case 6:
+                    os.system("cls")
+                    print("Mostrar Clientes")
                     banco.getClientes()
+                    os.system("pause")
 
                 case 7:
                     os.system("cls")
